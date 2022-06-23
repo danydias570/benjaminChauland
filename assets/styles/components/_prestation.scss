@@ -1,0 +1,73 @@
+.prestation {
+    width: 100%;
+    padding-top: 10%;
+    padding-bottom: 5%;
+
+    & .title {
+        @include centerDiv();
+        justify-content: flex-start;
+
+        & .images-bloc {
+            @include centerDiv();
+        }
+
+        & a {
+            @include centerDiv();
+        }
+
+        & img {
+            height: 50px;
+            margin-left: 20px;
+        }
+
+        & h3 {
+            font-size:  clamp(30px, 7vw, 40px);
+            font-weight: inherit;
+        }
+
+        &:nth-child(5) img {
+            height: 35px;
+        }
+    }
+
+    & .tab {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 40px 0 100px;
+
+        & .row {
+            display: flex;
+            justify-content: space-between;
+            border-top: .5px solid $light-brown;
+            padding: 30px 15px;
+            font-size: 18px;
+
+            &:last-child {
+                border-bottom: .5px solid $light-brown;
+            }
+
+            & .name {
+                @include centerDiv();
+                justify-content: flex-start;
+                font-weight: 900;
+                width: 75%;
+                min-width: 300px;
+            }
+
+            & .desc {
+                @include centerDiv();
+                justify-content: flex-start;
+                font-size: 14px;
+                width: 100%;
+            }
+
+            & .price {
+                @include centerDiv();
+                justify-content: flex-end;
+                font-weight: 900;
+                width: 30%;
+            }
+        }
+    }
+}

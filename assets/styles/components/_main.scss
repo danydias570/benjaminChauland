@@ -1,0 +1,19 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+}
+
+.large-picture {
+    @include centerDiv();
+    @include selectUser();
+    width: 100%;
+    padding-bottom: 5%;
+
+    & img {
+        width: 100%;
+    }
+}

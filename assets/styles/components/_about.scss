@@ -1,0 +1,53 @@
+.about {
+    padding-bottom: 15%;
+    border-bottom: .5px solid $light-brown;
+
+    .slider {
+        @include centerDiv();
+        flex-direction: column;
+        width: 100%;
+        @include selectUser();
+
+        & img {
+            width: auto;
+            height: 430px;
+            transition: .4s ease;
+        }
+
+        .button-box {
+            @include centerDiv();
+
+            & .slide-button {
+                margin: 50px;
+                height: 30px;
+                width: 30px;
+                cursor: pointer;
+                border-left: 2px solid $brown;
+                border-bottom: 2px solid $brown;
+    
+                &:nth-child(1) {
+                    transform: rotate(45deg);
+                }
+    
+                &:nth-child(2) {
+                    transform: rotate(-135deg);
+                }
+            }
+        }
+    }
+
+    & p {
+        text-align: center;
+        margin: auto;
+        margin-top: 3%;
+        width: 70%;
+        font-size: 16px;
+        line-height: 1.5;
+
+        & span {
+            font-weight: 900;
+            color: $light-brown;
+            font-style: italic;
+        }
+    }
+}

@@ -1,0 +1,230 @@
+/*
+** LAPTOP
+*/
+@media screen and (max-width: 1300px) {
+    .bottom {
+        padding-top: 13% !important;
+    }
+    .about-container {
+        width: 150% !important;
+    }
+    .about-container p {
+        width: 100% !important;
+    }
+}
+@media screen and (max-width: 1100px) { 
+    header .bottom {
+        flex-direction: column;
+    }
+    .title-container {
+        margin-top: 50px;
+        & h1 {
+            margin-left: 50px;
+            margin-bottom: 0 !important;
+            margin-right: 0 !important;
+        }
+    }
+    .about-container {
+        margin-top: 50px;
+        width: 70% !important;
+    }
+    .products .product {
+        flex-direction: column;
+        margin-bottom: 20%;
+
+        & img {
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 30px;
+            height: auto;
+            width: 70%;
+        }
+    }
+    .products .second img {
+        order: 1;
+    }
+    .products .second .desc-container {
+        order: 2;
+    }
+    .contact {
+        flex-direction: column;
+        & .link {
+            order: 2;
+            margin-right: 0;
+            margin-top: 5%;
+            font-size: 16px;
+        }
+        & img {
+            order: 1;
+        }
+    }
+}
+
+
+/*
+** PAD
+*/
+@media screen and (max-width: 800px) {
+    .burger-menu .nav-container .menu a {
+        font-size: 25px;
+    }
+    .burger-menu .nav-container .menu span {
+        font-size: 16px;
+    }
+    .nav-container {
+        margin-top: 80px;
+    }
+    .about-container {
+        margin-top: 50px;
+        width: 80% !important;
+    }
+    .products {
+        padding-top: 25%;
+    }
+    .products .product img {
+        height: auto;
+        width: 100%;
+    }
+    .products .product .desc-container p {
+        width: 100%;
+        font-size: 14px;
+    }
+    .prestation {
+        padding-top: 20%;
+    }
+    .prestation .tab {
+        margin-bottom: 80px;
+    }
+    .prestation .title {
+        flex-direction: column;
+    }
+    .prestation .title h3 {
+        text-align: center;
+    }
+    .prestation .title img {
+        margin-top: 10px;
+    }
+    .prestation .tab .row {
+        flex-direction: column;
+        & .name {
+            justify-content: center;
+            width: 100%;
+            min-width: none;
+        }
+        & .desc {
+            width: 100%;
+            padding: 20px;
+            justify-content: center;
+        }
+        & .price {
+            justify-content: center;
+            width: 100%;
+        }
+    }
+    .about {
+        padding-bottom: 20%;
+    }
+    .about p {
+        width: 100%;
+    }
+    .about .slider img {
+        width: 100%;
+        height: auto;
+    }
+    .contact {
+        padding-bottom: 25%;
+        padding-top: 25%;
+    }
+    .contact img {
+        width: 100%;
+        height: auto;
+    }
+    .footer-group {
+        padding: 10% 50px !important;
+    }
+    .footer-group .nav-container {
+        margin: 0;
+    }
+    .footer-group .nav-container .menu {
+        @include centerDiv();
+        align-items: flex-end;
+        flex-direction: column;
+        &  a {
+            margin: 5px 0 !important;
+        }
+    }
+}
+
+
+/*
+** MOBILE
+*/
+@media screen and (max-width: 450px) {
+    .burger-menu .nav-container .menu {
+        margin-bottom: 80px;
+    }
+    header .top {
+        padding: 20px 10% 0 !important;
+    }
+    .about-container {
+        width: 100% !important;
+    }
+    .title-container h1 {
+        margin-left: 22px;
+    }
+    .contact .link {
+        font-size: 16px;
+    }
+}
+
+
+/*
+** < OR IPHONE 5
+*/
+@media screen and (max-width: 325px) {
+    .burger-menu .nav-container .menu a {
+        font-size: 20px;
+    }
+    .burger-menu .nav-container .menu span {
+        font-size: 13px;
+    }
+    .bottom .nav-container a {
+        font-size: 10px !important;
+        & span {
+            font-size: 10px !important;
+        }
+    }
+    header .top .mail {
+        font-size: 12px;
+    }
+    header .top .burger {
+        font-size: 12px;
+    }
+    header .top span {
+        font-size: 14px;
+    }
+    .about-container p {
+        font-size: 14px !important;
+    }
+    .title-container h1 {
+        margin-left: 0px;
+
+        & span {
+            margin-right: 0 !important;
+        }
+    }
+    .contact img {
+        width: 100%;
+        height: auto;
+    }
+    .footer-group .logo-container {
+        font-size: 14px !important;
+    }
+    .footer-group .nav-container .menu a {
+        margin: 5px 0 !important;
+        font-size: 10px !important;
+        & span {
+            font-size: 10px !important;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.contact {
+    @include selectUser();
+    @include centerDiv();
+    width: 100%;
+    padding-bottom: 15%;
+    padding-top: 15%;
+
+    & .link {
+        @include centerDiv();
+        flex-direction: column;
+        font-size: 18px;
+        margin-right: 10%;
+        order: 1;
+
+        & a {
+            margin: 10px;
+            text-align: center;
+        }
+
+        & .animated-button {
+            display: inline-block;
+            background-color: $brown;
+            border-radius: 5px;
+            margin-top: 30px;
+
+            & span {
+                display: inline-block;
+                color: $body-background;
+                background: $yellow;
+                border: 1px solid $brown;
+                padding: 9px 13px;
+                border-radius: 5px;
+                font-size: 16px;
+                transition: transform 0.15s ease-out;
+            }
+
+            &:hover span {
+                transform: translate(-6px, -6px);
+            }
+        }
+    }
+
+    & img {
+        order: 2;
+        height: 350px;
+    }
+}
