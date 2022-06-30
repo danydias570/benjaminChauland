@@ -1,10 +1,17 @@
 <section class="about">
-    <div class="slider">
-        <img id="slider" src="/assets/images/picture-uno-cropped.jpeg" alt="">
-        <div class="button-box">
-            <div class="slide-button" onclick="ChangeSlide(-1)"></div>
-            <div class="slide-button" onclick="ChangeSlide(1)"></div>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="/assets/images/mon-projet-1.jpeg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/images/mon-projet-2.jpeg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/images/mon-projet-3.jpeg" alt="">
+            </div>
         </div>
+        <div class="swiper-pagination"></div>
     </div>
     <p>
         Voilà une expérience inoubliable à vivre dans cet espace beauté intimiste, aux couleurs minérales et matières naturelles.

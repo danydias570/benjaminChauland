@@ -4,6 +4,19 @@
     width: 100%;
     padding-top: 10%;
 
+    & h3 {
+        text-align: center;
+        width: 60%;
+        margin-bottom: 7%;
+        font-size: 18px;
+        font-weight: inherit;
+
+        & span {
+            color: $light-brown;
+            font-weight: 900;
+        }
+    }
+
     & .desc-container {
         @include centerDiv();
         width: 100%;
@@ -23,6 +36,13 @@
             margin-right: auto;
             height: 350px;
             transition: .4s ease-in-out;
+            filter: grayscale(1);
+            -webkit-filter: grayscale(1);
+
+            &:hover {
+                filter: grayscale(0);
+                -webkit-filter: grayscale(0);
+            }
         }
     }
     

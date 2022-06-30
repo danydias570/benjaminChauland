@@ -37,22 +37,36 @@ function closeBurger(){
 }
 
 
-let slider = new Array (
-    "/assets/images/picture-uno-cropped.jpeg", 
-    "/assets/images/font-teint.jpeg", 
-    "/assets/images/eye-liner.png"
-);
-let numero = 0;
+const swiper = new Swiper('.swiper', {
+    direction: 'horizontal',
+    spaceBetween: 30,
+    loop: true,
+    grabCursor: true,
+    centeredSlides: true,
+    effect: "creative",
 
-function ChangeSlide(sens) {
-    numero = numero + sens;
-    if (numero < 0){
-        numero = slider.length - 1;
-    }
-    if (numero > slider.length - 1){
-        numero = 0;
-    }
-    document.getElementById("slider").src = slider[numero];
-}
+    creativeEffect: {
+        prev: {
+        shadow: true,
+            translate: [0, 0, -400],
+        },
+        next: {
+            translate: ["100%", 0, 0],
+        },
+    },
 
-setInterval("ChangeSlide(1)", 4000);
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+});

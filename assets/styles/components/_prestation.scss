@@ -39,12 +39,12 @@
         & .row {
             display: flex;
             justify-content: space-between;
-            border-top: .5px solid $light-brown;
+            border-top: 1.5px solid $yellow;
             padding: 30px 15px;
             font-size: 18px;
 
             &:last-child {
-                border-bottom: .5px solid $light-brown;
+                border-bottom: 1.5px solid $yellow;
             }
 
             & .name {

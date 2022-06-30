@@ -204,11 +204,15 @@ header .bottom .nav-container .menu {
 }
 
 header .bottom .nav-container .menu a {
-  margin: 3px;
+  margin: 6px;
+  font-size: 16px;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  font-weight: 900;
 }
 
 header .bottom .nav-container .menu span {
-  font-size: 11px;
+  font-size: 13px;
 }
 
 header .bottom .title-container {
@@ -284,6 +288,15 @@ main {
 
 .large-picture img {
   width: 100%;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+}
+
+.large-picture img:hover {
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
 }
 
 .products {
@@ -302,6 +315,19 @@ main {
           flex-direction: column;
   width: 100%;
   padding-top: 10%;
+}
+
+.products h3 {
+  text-align: center;
+  width: 60%;
+  margin-bottom: 7%;
+  font-size: 18px;
+  font-weight: inherit;
+}
+
+.products h3 span {
+  color: #934d39;
+  font-weight: 900;
 }
 
 .products .desc-container {
@@ -341,6 +367,13 @@ main {
   height: 350px;
   -webkit-transition: .4s ease-in-out;
   transition: .4s ease-in-out;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+}
+
+.products .product img:hover {
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
 }
 
 .products .second img {
@@ -435,13 +468,13 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-top: 0.5px solid #934d39;
+  border-top: 1.5px solid #d3b001;
   padding: 30px 15px;
   font-size: 18px;
 }
 
 .prestation .tab .row:last-child {
-  border-bottom: 0.5px solid #934d39;
+  border-bottom: 1.5px solid #d3b001;
 }
 
 .prestation .tab .row .name {
@@ -501,63 +534,41 @@ main {
   border-bottom: 0.5px solid #934d39;
 }
 
-.about .slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
+.about .swiper {
+  display: block;
   -webkit-user-select: none;
   -ms-user-select: none;
   -moz-user-select: none;
        user-select: none;
+  width: 500px;
+  height: auto;
+  margin-bottom: 50px;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
 }
 
-.about .slider img {
-  width: auto;
-  height: 430px;
+.about .swiper .swiper-wrapper {
+  margin: auto;
+}
+
+.about .swiper .swiper-wrapper .swiper-slide {
+  margin: auto;
+}
+
+.about .swiper .swiper-wrapper .swiper-slide img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
   -webkit-transition: .4s ease;
   transition: .4s ease;
 }
 
-.about .slider .button-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.about .slider .button-box .slide-button {
-  margin: 50px;
-  height: 30px;
-  width: 30px;
-  cursor: pointer;
-  border-left: 2px solid #532f25;
-  border-bottom: 2px solid #532f25;
-}
-
-.about .slider .button-box .slide-button:nth-child(1) {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.about .slider .button-box .slide-button:nth-child(2) {
-  -webkit-transform: rotate(-135deg);
-          transform: rotate(-135deg);
+.about .swiper:hover {
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
 }
 
 .about p {
@@ -713,6 +724,12 @@ footer .footer-group .nav-container .menu a {
 /*
 ** LAPTOP
 */
+@media screen and (min-width: 1900px) {
+  .about .swiper {
+    width: 700px;
+  }
+}
+
 @media screen and (max-width: 1300px) {
   .bottom {
     padding-top: 13% !important;
@@ -809,6 +826,11 @@ footer .footer-group .nav-container .menu a {
   .products {
     padding-top: 25%;
   }
+  .products h3 {
+    width: 100%;
+    margin-bottom: 10%;
+    font-size: 16px;
+  }
   .products .product img {
     height: auto;
     width: 100%;
@@ -864,12 +886,11 @@ footer .footer-group .nav-container .menu a {
   .about {
     padding-bottom: 20%;
   }
+  .about .swiper {
+    width: 80vw;
+  }
   .about p {
     width: 100%;
-  }
-  .about .slider img {
-    width: 100%;
-    height: auto;
   }
   .contact {
     padding-bottom: 25%;

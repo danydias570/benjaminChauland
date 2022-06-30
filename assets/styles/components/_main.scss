@@ -15,5 +15,13 @@ main {
 
     & img {
         width: 100%;
+        transition: .4s ease;
+        filter: grayscale(1);
+        -webkit-filter: grayscale(1);
+
+        &:hover {
+            filter: grayscale(0);
+            -webkit-filter: grayscale(0);
+        }
     }
 }

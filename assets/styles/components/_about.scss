@@ -2,37 +2,34 @@
     padding-bottom: 15%;
     border-bottom: .5px solid $light-brown;
 
-    .slider {
-        @include centerDiv();
-        flex-direction: column;
-        width: 100%;
+    & .swiper {
+        display: block;
         @include selectUser();
+        width: 500px;
+        height: auto;
+        margin-bottom: 50px;
+        transition: .4s ease;
+        filter: grayscale(1);
+        -webkit-filter: grayscale(1);
 
-        & img {
-            width: auto;
-            height: 430px;
-            transition: .4s ease;
-        }
+        & .swiper-wrapper {
+            margin: auto;
 
-        .button-box {
-            @include centerDiv();
+            & .swiper-slide {
+                margin: auto;
 
-            & .slide-button {
-                margin: 50px;
-                height: 30px;
-                width: 30px;
-                cursor: pointer;
-                border-left: 2px solid $brown;
-                border-bottom: 2px solid $brown;
-    
-                &:nth-child(1) {
-                    transform: rotate(45deg);
-                }
-    
-                &:nth-child(2) {
-                    transform: rotate(-135deg);
+                & img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                    transition: .4s ease;
                 }
             }
+        }
+
+        &:hover {
+            filter: grayscale(0);
+            -webkit-filter: grayscale(0);
         }
     }
 

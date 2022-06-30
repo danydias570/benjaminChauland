@@ -55,11 +55,15 @@ header {
                 flex-direction: column;
 
                 & a {
-                    margin: 3px;
+                    margin: 6px;
+                    font-size: 16px;
+                    text-underline-offset: 3px;
+                    text-decoration-thickness: 1px;
+                    font-weight: 900;
                 }
 
                 & span {
-                    font-size: 11px;
+                    font-size: 13px;
                 }
             }
         }

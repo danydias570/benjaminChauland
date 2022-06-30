@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="/assets/styles/styles.css">
     <title>Institut Benjamin Chauland</title>
 </head>
@@ -20,6 +21,7 @@
         <?php include "./components/contact.html.php" ?>
     </main>
     <?php include "./components/footer.html.php" ?>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script src="/assets/scripts/app.js"></script>
 </body>
 </html>
